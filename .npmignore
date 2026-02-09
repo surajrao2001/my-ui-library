@@ -1,0 +1,4 @@
+src
+.storybook
+node_modules
+.vscode
