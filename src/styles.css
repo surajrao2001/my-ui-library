@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap");
+
+@theme {
+  /* Fonts */
+  --font-display: "Bebas Neue", sans-serif;
+  --font-heading: "Oswald", sans-serif;
+  --font-sans: "Noto Sans", sans-serif;
+
+  /* Main */
+  --color-primary: #c74a3d;
+  --color-primary-sun: #e04b2a;
+  --color-background: #fcf8e8;
+  --color-surface: #f8f8f8;
+
+  /* Side */
+  --color-secondary: #722e00;
+  --color-muted-earth: #a0684a;
+  --color-text: #0a0a0a;
+  --color-text-muted: #2f2f2f;
+  --color-border: #e2d5c4;
+
+  /* Accents */
+  --color-accent-gold: #ffd700;
+  --color-accent-teal: #3fa796;
+  --color-accent-orange: #ff8c00;
+  --color-accent-crimson: #c74a3d;
+
+  /* Highlights */
+  --color-highlight: #fcd88b;
+  --color-highlight-soft: #f5e0a6;
+
+  /* Semantic */
+  --color-success: #3fa796;
+  --color-warning: #eabf60;
+  --color-error: #c74a3d;
+  --color-info: #607b8b;
+}
