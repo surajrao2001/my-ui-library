@@ -1,6 +1,5 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap");
+@import "tailwindcss";
 
 @theme {
   /* Fonts */
@@ -36,4 +35,8 @@
   --color-warning: #eabf60;
   --color-error: #c74a3d;
   --color-info: #607b8b;
+
+  /* Motion */
+  --transition-duration: 200ms;
+  --transition-duration-slow: 300ms;
 }
