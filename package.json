@@ -1,7 +1,20 @@
 {
-  "name": "my-ui-library",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@surajrao/my-ui-library",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surajrao2001/my-ui-library"
+  },
+  "description": "A UI library for React",
+  "keywords": [
+    "react",
+    "ui",
+    "library",
+    "components"
+  ],
+  "author": "Suraj Rao",
+  "license": "MIT",
+  "version": "0.1.0",
   "type": "module",
   "main": "./dist/my-ui-library.umd.cjs",
   "module": "./dist/my-ui-library.js",
@@ -26,7 +39,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && tsc -p tsconfig.build.json",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -38,15 +51,15 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "postcss": "^8.5.6",
-    "tailwind-merge": "^3.4.0",
-    "tailwindcss": "^4.1.18",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
     "@eslint/js": "^9.39.1",
     "@storybook/react-vite": "^10.2.7",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
