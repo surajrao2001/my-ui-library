@@ -14,7 +14,7 @@
   ],
   "author": "Suraj Rao",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./dist/my-ui-library.umd.cjs",
   "module": "./dist/my-ui-library.js",
@@ -51,8 +51,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "postcss": "^8.5.6",
-    "react": "^18",
-    "react-dom": "^18",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18"
   },
