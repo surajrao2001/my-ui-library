@@ -1,42 +1,94 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  /* Fonts */
   --font-display: "Bebas Neue", sans-serif;
-  --font-heading: "Oswald", sans-serif;
-  --font-sans: "Noto Sans", sans-serif;
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* Main */
-  --color-primary: #c74a3d;
-  --color-primary-sun: #e04b2a;
-  --color-background: #fcf8e8;
-  --color-surface: #f8f8f8;
-
-  /* Side */
-  --color-secondary: #722e00;
-  --color-muted-earth: #a0684a;
-  --color-text: #0a0a0a;
-  --color-text-muted: #2f2f2f;
-  --color-border: #e2d5c4;
-
-  /* Accents */
-  --color-accent-gold: #ffd700;
-  --color-accent-teal: #3fa796;
-  --color-accent-orange: #ff8c00;
-  --color-accent-crimson: #c74a3d;
-
-  /* Highlights */
-  --color-highlight: #fcd88b;
-  --color-highlight-soft: #f5e0a6;
-
-  /* Semantic */
-  --color-success: #3fa796;
-  --color-warning: #eabf60;
-  --color-error: #c74a3d;
-  --color-info: #607b8b;
-
-  /* Motion */
   --transition-duration: 200ms;
   --transition-duration-slow: 300ms;
+
+  /* Semantic: background */
+  --color-background: #fdfaf4;
+  --color-background-subtle: #fef9e7;
+
+  /* Semantic: surface */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f9fafb;
+  --color-surface-muted: #f9fafb;
+
+  /* Semantic: border */
+  --color-border: #e5e7eb;
+  --color-border-muted: #f3f4f6;
+
+  /* Semantic: primary (WCAG AA on surface) */
+  --color-primary: #c74a3d;
+  --color-primary-hover: #e04b2a;
+  --color-primary-foreground: #ffffff;
+
+  /* Semantic: secondary / accent */
+  --color-secondary: #722e00;
+  --color-accent: #3fa796;
+
+  /* Semantic: destructive & status */
+  --color-destructive: #ef4444;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+
+  /* Semantic: text */
+  --color-text-primary: #1f1f1f;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #6b7280;
+
+  /* Semantic: focus (visible ring) */
+  --color-focus-ring: #c74a3d;
+
+  /* Aliases for existing component usage */
+  --color-text: var(--color-text-primary);
+  --color-highlight: #fef3c7;
+  --color-highlight-soft: #fef9e7;
+  --color-muted-earth: #a0684a;
+  --color-primary-sun: var(--color-primary-hover);
+  --color-accent-gold: #fbbf24;
+  --color-accent-teal: #3fa796;
+  --color-accent-orange: #f59e0b;
+  --color-accent-crimson: #c74a3d;
+  --color-error: var(--color-destructive);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1512;
+    --color-background-subtle: #251f1a;
+    --color-surface: #2d2622;
+    --color-surface-hover: #3d3530;
+    --color-surface-muted: #362f2a;
+    --color-border: #4a423c;
+    --color-border-muted: #3d3530;
+    --color-primary: #e04b2a;
+    --color-primary-hover: #f25c3a;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #c49a6c;
+    --color-accent: #4fbdad;
+    --color-destructive: #f87171;
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-info: #60a5fa;
+    --color-text-primary: #fdfaf4;
+    --color-text-secondary: #e5e0d8;
+    --color-text-muted: #a09a92;
+    --color-focus-ring: #f25c3a;
+    --color-text: var(--color-text-primary);
+    --color-highlight: #3d3530;
+    --color-highlight-soft: #362f2a;
+    --color-muted-earth: #c49a6c;
+    --color-primary-sun: var(--color-primary-hover);
+    --color-accent-gold: #fcd34d;
+    --color-accent-teal: #4fbdad;
+    --color-accent-orange: #fbbf24;
+    --color-accent-crimson: #e04b2a;
+    --color-error: var(--color-destructive);
+  }
 }

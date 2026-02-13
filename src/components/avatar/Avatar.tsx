@@ -4,7 +4,7 @@ import { cn } from "../../utils/cn";
 import type { AvatarProps as AvatarPropsType } from "./avatar.types";
 
 const avatarVariants = cva(
-  "inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted-earth font-heading font-semibold text-highlight",
+  "inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-surface-muted font-heading font-semibold text-text-primary",
   {
     variants: {
       size: {

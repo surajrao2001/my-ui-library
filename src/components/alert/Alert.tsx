@@ -11,7 +11,7 @@ const alertVariants = cva(
         success:
           "border-success/50 bg-success/10 text-success",
         error:
-          "border-error/50 bg-error/10 text-error",
+          "border-destructive/50 bg-destructive/10 text-destructive",
         warning:
           "border-warning/50 bg-warning/10 text-warning",
         info: "border-info/50 bg-info/10 text-info",
