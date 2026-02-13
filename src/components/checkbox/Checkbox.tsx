@@ -12,8 +12,8 @@ const checkboxVariants = cva(
         md: "h-5 w-5",
       },
       error: {
-        true: "border-error focus:ring-error",
-        false: "border-border focus:ring-primary",
+        true: "border-destructive focus:ring-destructive",
+        false: "border-border focus:ring-focus-ring",
       },
     },
     defaultVariants: {

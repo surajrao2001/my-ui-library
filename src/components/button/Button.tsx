@@ -10,14 +10,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary text-white hover:bg-primary-sun focus-visible:ring-primary shadow-sm hover:shadow-md",
+          "bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-focus-ring focus-visible:ring-offset-2 shadow-sm hover:shadow-md",
         secondary:
-          "bg-secondary text-highlight hover:bg-muted-earth focus-visible:ring-secondary",
+          "bg-secondary text-primary-foreground hover:bg-surface-muted focus-visible:ring-focus-ring focus-visible:ring-offset-2",
         outline:
-          "border-2 border-border bg-transparent text-text hover:bg-surface hover:border-primary focus-visible:ring-primary",
-        ghost: "text-text hover:bg-surface focus-visible:ring-muted-earth",
+          "border-2 border-border bg-transparent text-text-primary hover:bg-surface-hover hover:border-primary focus-visible:ring-focus-ring focus-visible:ring-offset-2",
+        ghost: "text-text-primary hover:bg-surface-hover focus-visible:ring-focus-ring focus-visible:ring-offset-2",
         accent:
-          "bg-accent-gold text-text hover:bg-highlight focus-visible:ring-accent-gold shadow-sm hover:shadow-md",
+          "bg-accent text-text-primary hover:bg-surface-muted focus-visible:ring-focus-ring focus-visible:ring-offset-2 shadow-sm hover:shadow-md",
       },
       size: {
         sm: "h-8 px-3 text-xs rounded-md",

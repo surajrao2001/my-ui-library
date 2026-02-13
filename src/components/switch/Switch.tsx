@@ -4,7 +4,7 @@ import { cn } from "../../utils/cn";
 import type { SwitchProps as SwitchPropsType } from "./switch.types";
 
 const switchVariants = cva(
-  "cursor-pointer inline-flex shrink-0 items-center rounded-full border-2 border-transparent transition-colors duration-[var(--transition-duration)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+  "cursor-pointer inline-flex shrink-0 items-center rounded-full border-2 border-transparent transition-colors duration-[var(--transition-duration)] focus:outline-none focus:ring-2 focus:ring-focus-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       size: {
@@ -19,7 +19,7 @@ const switchVariants = cva(
 );
 
 const thumbVariants = cva(
-  "pointer-events-none inline-block rounded-full bg-white shadow-sm transition-transform duration-[var(--transition-duration)]",
+  "pointer-events-none inline-block rounded-full bg-surface shadow-sm transition-transform duration-[var(--transition-duration)]",
   {
     variants: {
       size: {
@@ -50,7 +50,7 @@ export const Switch = forwardRef<HTMLButtonElement, Props>(
         aria-checked={checked}
         className={cn(
           switchVariants({ size }),
-          checked ? "bg-primary" : "bg-muted-earth",
+          checked ? "bg-primary" : "bg-surface-muted",
           className
         )}
         {...props}

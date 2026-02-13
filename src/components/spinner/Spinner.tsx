@@ -4,7 +4,7 @@ import { cn } from "../../utils/cn";
 import type { SpinnerProps as SpinnerPropsType } from "./spinner.types";
 
 const spinnerVariants = cva(
-  "animate-spin rounded-full border-2 border-muted-earth border-t-primary",
+  "animate-spin rounded-full border-2 border-border-muted border-t-primary",
   {
     variants: {
       size: {

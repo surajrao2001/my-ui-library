@@ -10,7 +10,7 @@ const cardVariants = cva(
       variant: {
         default: "bg-surface border border-border",
         elevated: "bg-surface shadow-md hover:shadow-lg",
-        outlined: "bg-transparent border-2 border-border hover:border-muted-earth",
+        outlined: "bg-transparent border-2 border-border hover:border-border-muted",
       },
       hoverable: {
         true: "cursor-pointer hover:-translate-y-0.5",

@@ -4,12 +4,12 @@ import { cn } from "../../utils/cn";
 import type { SelectProps as SelectPropsType } from "./select.types";
 
 const selectVariants = cva(
-  "cursor-pointer appearance-none font-sans text-text transition-all duration-[var(--transition-duration)] focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 [&>option]:bg-surface",
+  "cursor-pointer appearance-none font-sans text-text-primary transition-all duration-[var(--transition-duration)] focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 [&>option]:bg-surface",
   {
     variants: {
       error: {
-        true: "border-error focus:ring-error",
-        false: "border-border focus:ring-primary",
+        true: "border-destructive focus:ring-destructive",
+        false: "border-border focus:ring-focus-ring",
       },
       fullWidth: {
         true: "w-full",
@@ -24,22 +24,29 @@ const selectVariants = cva(
 );
 
 const baseClasses =
-  "h-10 pl-4 pr-10 rounded-lg border-2 bg-surface bg-[length:1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat hover:border-muted-earth";
+  "h-10 pl-4 pr-10 rounded-lg border-2 bg-surface hover:border-border-muted";
 
 type Props = SelectPropsType & VariantProps<typeof selectVariants>;
 
 export const Select = forwardRef<HTMLSelectElement, Props>(
   ({ className, error, fullWidth, children, ...props }, ref) => (
-    <select
-      ref={ref}
-      className={cn(baseClasses, selectVariants({ error, fullWidth }), className)}
-      style={{
-        backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
-      }}
-      {...props}
-    >
-      {children}
-    </select>
+    <div className={cn("relative", fullWidth && "w-full")}>
+      <select
+        ref={ref}
+        className={cn(baseClasses, selectVariants({ error, fullWidth }), className)}
+        {...props}
+      >
+        {children}
+      </select>
+      <span
+        className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-text-muted"
+        aria-hidden
+      >
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </span>
+    </div>
   )
 );
 

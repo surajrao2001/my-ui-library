@@ -9,11 +9,11 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-surface border border-border text-text hover:bg-muted-earth",
-        primary: "bg-primary text-white hover:bg-primary-sun",
-        success: "bg-success text-white",
-        warning: "bg-warning text-text hover:bg-highlight-soft",
-        error: "bg-error text-white",
+          "bg-surface border border-border text-text-primary hover:bg-surface-hover",
+        primary: "bg-primary text-primary-foreground hover:bg-primary-hover",
+        success: "bg-success text-primary-foreground",
+        warning: "bg-warning text-text-primary hover:bg-surface-muted",
+        error: "bg-destructive text-primary-foreground",
       },
       size: {
         sm: "px-2 py-0.5 text-xs rounded",
